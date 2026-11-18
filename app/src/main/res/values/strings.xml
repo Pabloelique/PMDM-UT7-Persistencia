@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PMDM UT7</string>
+    <string name="txt_base">Proyecto base de la UT7 (Persistencia de datos).\n\nCambia de rama para ver cada laboratorio:\n• lab1 → El Registro de Guardias de la Ciudadela\n• lab2 → Los Pergaminos de la Ciudadela Blanca\n• lab3 → (pendiente)</string>
+</resources>
