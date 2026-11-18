@@ -3,6 +3,7 @@
     Lab 2 - Pantalla de los Pergaminos de la Ciudadela Blanca
     @autor Pablo Jiménez Jorquera
     @fecha 18/11/2026
+    @modificado 18/11/2026 - añado el almacenamiento externo (mapas de campaña)
 -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -77,6 +78,34 @@
             android:layout_width="260dp"
             android:layout_height="54dp"
             android:text="Desenrollar y Leer Pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#34495E"
+            android:layout_marginBottom="24dp" />
+        <!-- Botones del almacenamiento externo privado (mapas de campaña en Documents) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mapas de campaña (memoria externa)"
+            android:textColor="#9E9E9E"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnEscribirExterno"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Trazar y Guardar Mapa"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#16A085"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnLeerExterno"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Consultar Mapa de Campaña"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#34495E" />

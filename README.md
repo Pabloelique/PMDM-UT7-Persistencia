@@ -31,3 +31,19 @@ Abrir la carpeta con Android Studio → *Sync Gradle* → *Run* sobre un emulado
 **Prueba:** Aragorn · Veterano · En Guardia → *Guardar registro* → cerrar la app desde el administrador de tareas → al volver a abrirla el formulario sale relleno.
 
 El fichero está en *Device File Explorer* → `data/data/com.ies.iax.prgmdm/shared_prefs/RegistroGuardia.xml`.
+
+---
+
+## Lab 2 — Los Pergaminos de la Ciudadela Blanca (esta rama)
+
+Sigue desde el Lab 1: en el menú hay un segundo botón que abre `FicherosActivity.kt`.
+
+- **Interno:** `openFileOutput` / `openFileInput` con `Context.MODE_PRIVATE` y `.use { }` para cerrar el flujo.
+- **Externo privado:** `getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)`, comprobando antes `Environment.getExternalStorageState()` (para escribir `MEDIA_MOUNTED`, para leer también `MEDIA_MOUNTED_READ_ONLY`) y `.exists()` antes de leer.
+- **Errores:** nombre vacío → error en el campo; fichero que no existe → `FileNotFoundException` / aviso con `Toast`.
+
+**Prueba:** escribir el reporte de Faramir → `cronica.txt` → *Sellar y Guardar* (interno). Volver a escribirlo → `mapa_oeste.txt` → *Trazar y Guardar Mapa* (externo). Leer los dos con sus botones y probar un nombre que no existe.
+
+**Device File Explorer:**
+- Interno: `data/data/com.ies.iax.prgmdm/files/cronica.txt`
+- Externo: `sdcard/Android/data/com.ies.iax.prgmdm/files/Documents/mapa_oeste.txt`
