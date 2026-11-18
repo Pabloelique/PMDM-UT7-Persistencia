@@ -3,6 +3,7 @@
     Menú principal de la UT7 (parto del menú que nos dio el profe)
     @autor Pablo Jiménez Jorquera
     @fecha 18/11/2026
+    @modificado 18/11/2026 - añado el botón del Lab 2 (Pergaminos)
 -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -72,6 +73,28 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#6C5CE7"
+            android:layout_marginBottom="32dp"
+            app:cornerRadius="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📂 LAB 2 • FICHEROS INTERNOS Y EXTERNOS"
+            android:textColor="#9E9E9E"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón del Lab 2 (Ficheros) -->
+        <Button
+            android:id="@+id/btnIrFicheros"
+            android:layout_width="290dp"
+            android:layout_height="56dp"
+            android:text="Los Pergaminos de la Ciudadela"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E17055"
             android:layout_marginBottom="32dp"
             app:cornerRadius="10dp" />
 

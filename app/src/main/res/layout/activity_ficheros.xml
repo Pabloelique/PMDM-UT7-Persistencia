@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Lab 2 - Pantalla de los Pergaminos de la Ciudadela Blanca
+    @autor Pablo Jiménez Jorquera
+    @fecha 18/11/2026
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜 ARCHIVO DE LA CIUDADELA"
+            android:textColor="#FAB1A0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Nombre del fichero -->
+        <EditText
+            android:id="@+id/etNombreArchivo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre del pergamino (ej: cronica.txt)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto del pergamino -->
+        <EditText
+            android:id="@+id/etContenidoFichero"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Escribe la crónica o el parte de exploración aquí..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botones del almacenamiento interno (bóveda privada) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bóveda privada (memoria interna)"
+            android:textColor="#9E9E9E"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnEscribirFichero"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Sellar y Guardar Pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E17055"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnLeerFichero"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Desenrollar y Leer Pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#34495E" />
+    </LinearLayout>
+</ScrollView>
