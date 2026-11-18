@@ -15,3 +15,19 @@ git checkout lab1   # o lab2 / lab3
 ```
 
 Abrir la carpeta con Android Studio → *Sync Gradle* → *Run* sobre un emulador.
+
+---
+
+## Lab 1 — El Registro de Guardias de la Ciudadela (esta rama)
+
+`PreferenciasActivity.kt` guarda los datos del soldado con `SharedPreferences` en `RegistroGuardia.xml` y los carga en `onResume()`.
+
+| Control | Tipo | Clave | Valores |
+|---------|------|-------|---------|
+| Nombre (`EditText`) | `String` | `KEY_SOLDADO` | Texto, no vacío |
+| Rango (`Spinner`, sale de `strings.xml`) | `Int` | `KEY_RANGO` | 0 Recluta · 1 Capitán · 2 Veterano |
+| Estado (`Switch`) | `Boolean` | `KEY_ESTADO` | `true` En Guardia · `false` En Reposo |
+
+**Prueba:** Aragorn · Veterano · En Guardia → *Guardar registro* → cerrar la app desde el administrador de tareas → al volver a abrirla el formulario sale relleno.
+
+El fichero está en *Device File Explorer* → `data/data/com.ies.iax.prgmdm/shared_prefs/RegistroGuardia.xml`.
