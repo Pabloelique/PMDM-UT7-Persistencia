@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Lab 1 - Pantalla del Registro de Guardias
+    @autor Pablo Jiménez Jorquera
+    @fecha 18/11/2026
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#121214">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📜 REGISTRO DE GUARDIAS DE LA CIUDADELA"
+        android:textColor="#A29BFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Nombre del soldado (KEY_SOLDADO) -->
+    <EditText
+        android:id="@+id/etSoldado"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nombre del efectivo"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#75757A"
+        android:backgroundTint="#6C5CE7"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Rango (KEY_RANGO). Los rangos los saco del array de strings.xml -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rango militar"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/spRango"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:entries="@array/rangos"
+        android:backgroundTint="#6C5CE7"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Estado del turno (KEY_ESTADO): activado = En Guardia, desactivado = En Reposo -->
+    <Switch
+        android:id="@+id/swEstado"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="En Reposo"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:text="Guardar registro"
+        android:backgroundTint="#6C5CE7"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Aquí enseño lo que hay guardado en RegistroGuardia.xml -->
+    <TextView
+        android:id="@+id/tvUltimoRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Último registro: ninguno"
+        android:textColor="#9E9E9E"
+        android:textSize="14sp" />
+
+</LinearLayout>

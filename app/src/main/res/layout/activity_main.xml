@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Pantalla de la rama main: solo un texto que explica qué hay en cada rama -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+    Menú principal de la UT7 (parto del menú que nos dio el profe)
+    @autor Pablo Jiménez Jorquera
+    @fecha 18/11/2026
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:background="#0D0D11"
+    android:padding="24dp"
+    tools:context=".MainActivity">
 
+    <!-- Cabecera -->
+    <TextView
+        android:id="@+id/tvHeaderAsignatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2627 - IAX - Prg. MDM"
+        android:textColor="#75757A"
+        android:textSize="13sp"
+        android:letterSpacing="0.12"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMainTituloUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="UT7: Persistencia de Datos"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvHeaderAsignatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Aquí van los botones de cada laboratorio -->
+    <LinearLayout
+        android:id="@+id/llBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvMainTituloUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📂 LAB 1 • PREFERENCIAS COMPARTIDAS"
+            android:textColor="#9E9E9E"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón del Lab 1 (SharedPreferences) -->
+        <Button
+            android:id="@+id/btnIrPrefs"
+            android:layout_width="290dp"
+            android:layout_height="56dp"
+            android:text="El Registro de Guardias"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#6C5CE7"
+            android:layout_marginBottom="32dp"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+    <!-- Pie -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/txt_base"
-        android:textSize="16sp" />
-</FrameLayout>
+        android:text="Pablo Jiménez Jorquera • 2º DAM"
+        android:textColor="#3A3A42"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
